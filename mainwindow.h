@@ -13,7 +13,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-
+    void atulizarDados();
 signals:
     void mudar_atributosForca(int);
     void mudar_atributosDestreza(int);
@@ -22,17 +22,18 @@ signals:
     void mudar_atributosCarisma(int);
 
 private slots:
+    void recebeLevel(int x);
 
     void on_comboBox_activated(int index);
     void on_comboBox_2_activated(int index);
 
-    void on_label_20_linkActivated(const QString &link);
+    //void on_label_20_linkActivated(const QString &link);
 
 private:
     Ui::MainWindow *ui;
     int racas[5];
     int classes[5];
-    int forc, des, inte, cons, car;
+    int forc, des, inte, cons, car, lvl;
 };
 
 #endif // MAINWINDOW_H

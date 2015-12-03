@@ -738,6 +738,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>recebeLevel(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <signal>mudar_atributosForca(int)</signal>
@@ -745,5 +761,6 @@
   <signal>mudar_atributosInteligencia(int)</signal>
   <signal>mudar_atributosConstituicao(int)</signal>
   <signal>mudar_atributosCarisma(int)</signal>
+  <slot>recebeLevel(int)</slot>
  </slots>
 </ui>
