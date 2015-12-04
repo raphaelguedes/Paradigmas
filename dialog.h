@@ -14,7 +14,8 @@ class Dialog : public QDialog
 public:
     explicit Dialog(QWidget *parent = 0);
     ~Dialog();
-
+signals:
+    void vida_perdida(int);
 private:
     Ui::Dialog *ui;
 };

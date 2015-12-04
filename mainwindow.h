@@ -20,20 +20,25 @@ signals:
     void mudar_atributosInteligencia(int);
     void mudar_atributosConstituicao(int);
     void mudar_atributosCarisma(int);
+    void pv(int);
+    void pm(int);
+    void pa(int);
+    void inic(int);
+    void vida_atual(int);
 
 private slots:
     void recebeLevel(int x);
+    void vida_perdida(QString z);
+    void perder_vida();
 
     void on_comboBox_activated(int index);
     void on_comboBox_2_activated(int index);
-
-    //void on_label_20_linkActivated(const QString &link);
 
 private:
     Ui::MainWindow *ui;
     int racas[5];
     int classes[5];
-    int forc, des, inte, cons, car, lvl;
+    int forc, des, inte, cons, car, lvl, pacao ,pvida ,pmana, ini, vida, vidap;
 };
 
 #endif // MAINWINDOW_H

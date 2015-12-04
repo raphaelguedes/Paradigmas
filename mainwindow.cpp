@@ -12,13 +12,24 @@ MainWindow::MainWindow(QWidget *parent) :
         classes[i]=0;
     }
     lvl=0;
+    vidap=0;
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+void MainWindow::vida_perdida(QString z){
+    vidap = z.toInt();
+}
+void MainWindow::perder_vida(){
+    vida = vida - vidap;
+    if(vida<0){
+        vida = 0;
 
+    }
+    vida_atual(vida);
+}
 
 void MainWindow::atulizarDados(){
     forc = (racas[0]*7 + racas[1]*2 + racas[2]*10 + racas[3]*8 + racas[4]*10 +
@@ -43,6 +54,19 @@ void MainWindow::atulizarDados(){
 
 
     //TODO VIDA,MANA,STAMINA
+    pvida = 2*lvl + cons*1.5 + forc* 0.5;
+    pv(pvida);
+    vida = pvida;
+    vida_atual(vida);
+    pmana = 2*lvl + inte*1.5;
+    pm(pmana);
+    pacao = 2*lvl + forc*1.3 + des*0.3 ;
+    pa(pacao);
+    ini = 2*lvl + des*1.7 - cons*0.7;
+    inic(ini);
+
+
+
 
 
 }

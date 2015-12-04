@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>469</width>
-    <height>428</height>
+    <width>755</width>
+    <height>514</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -150,7 +150,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBox"/>
+      <widget class="QSpinBox" name="spinBox">
+       <property name="maximum">
+        <number>999999</number>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -192,8 +196,8 @@
      <rect>
       <x>180</x>
       <y>60</y>
-      <width>110</width>
-      <height>61</height>
+      <width>111</width>
+      <height>63</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -212,11 +216,22 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_7">
-       <property name="text">
-        <string>000/000</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_34">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
@@ -226,7 +241,7 @@
       <x>180</x>
       <y>120</y>
       <width>111</width>
-      <height>61</height>
+      <height>63</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -245,11 +260,22 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string>000/000</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_32">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
@@ -259,7 +285,7 @@
       <x>180</x>
       <y>180</y>
       <width>111</width>
-      <height>61</height>
+      <height>63</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -278,11 +304,22 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_11">
-       <property name="text">
-        <string>000/000</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_33">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
@@ -334,7 +371,7 @@
         <item>
          <widget class="QLabel" name="label_20">
           <property name="text">
-           <string>000</string>
+           <string>0</string>
           </property>
          </widget>
         </item>
@@ -352,7 +389,7 @@
         <item>
          <widget class="QLabel" name="label_21">
           <property name="text">
-           <string>000</string>
+           <string>0</string>
           </property>
          </widget>
         </item>
@@ -370,7 +407,7 @@
         <item>
          <widget class="QLabel" name="label_22">
           <property name="text">
-           <string>000</string>
+           <string>0</string>
           </property>
          </widget>
         </item>
@@ -388,7 +425,7 @@
         <item>
          <widget class="QLabel" name="label_23">
           <property name="text">
-           <string>000</string>
+           <string>0</string>
           </property>
          </widget>
         </item>
@@ -406,7 +443,7 @@
         <item>
          <widget class="QLabel" name="label_24">
           <property name="text">
-           <string>000</string>
+           <string>0</string>
           </property>
          </widget>
         </item>
@@ -435,7 +472,7 @@
      <item>
       <widget class="QLabel" name="label_19">
        <property name="text">
-        <string>000</string>
+        <string>0</string>
        </property>
       </widget>
      </item>
@@ -483,7 +520,7 @@
      <item>
       <widget class="QLabel" name="label_29">
        <property name="text">
-        <string>00</string>
+        <string>0</string>
        </property>
       </widget>
      </item>
@@ -509,7 +546,7 @@
      <item>
       <widget class="QLabel" name="label_31">
        <property name="text">
-        <string>00</string>
+        <string>0</string>
        </property>
       </widget>
      </item>
@@ -535,11 +572,247 @@
      <item>
       <widget class="QLabel" name="label_27">
        <property name="text">
-        <string>000</string>
+        <string>0</string>
        </property>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>10</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Levar Dano</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>10</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>40</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Receber Cura</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>40</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>300</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Usar Poção de vida</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>330</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Usar Poção de mana</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>300</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_5">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>330</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>360</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Obter poção de vida</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>390</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Obter poção de mana</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>70</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Usar Magia</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_6">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>70</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>100</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Realizar Ação</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_7">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>100</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>130</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Repousar</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_8">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>160</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_10">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>160</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Receber Dinheiro</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_9">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>190</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_11">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>190</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gastar Dinheiro</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>131</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Adicionar Equipamento</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -547,7 +820,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>469</width>
+     <width>755</width>
      <height>21</height>
     </rect>
    </property>
@@ -555,30 +828,14 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionNovo_Personagem"/>
     <addaction name="actionSalvar_Personagem"/>
-   </widget>
-   <widget class="QMenu" name="menuA_es">
-    <property name="title">
-     <string>Ações</string>
-    </property>
-    <addaction name="actionAdicionar_Equipamento"/>
-    <addaction name="actionCriar_Equipamento"/>
+    <addaction name="actionAbrir_Personagem"/>
+    <addaction name="actionLimpar_Dados"/>
     <addaction name="separator"/>
-    <addaction name="actionLevar_Dano"/>
-    <addaction name="actionReceber_Cura"/>
-    <addaction name="separator"/>
-    <addaction name="actionUsar_po_o_de_vida"/>
-    <addaction name="actionUsar_po_o_de_mana"/>
-    <addaction name="actionUsar_Magia"/>
-    <addaction name="actionFazer_A_o"/>
-    <addaction name="actionRepousar"/>
-    <addaction name="separator"/>
-    <addaction name="actionReceber_Dinheiro"/>
-    <addaction name="actionGastar_Dinheiro"/>
+    <addaction name="actionNova_Ra_a"/>
+    <addaction name="actionNovo_Personagem"/>
    </widget>
    <addaction name="menuNovo_Personagem"/>
-   <addaction name="menuA_es"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -591,7 +848,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNovo_Personagem">
    <property name="text">
-    <string>Novo Personagem</string>
+    <string>Nova Classe</string>
    </property>
   </action>
   <action name="actionSalvar_Personagem">
@@ -652,6 +909,26 @@
   <action name="actionRepousar">
    <property name="text">
     <string>Repousar</string>
+   </property>
+  </action>
+  <action name="actionAbrir_Personagem">
+   <property name="text">
+    <string>Abrir Personagem</string>
+   </property>
+  </action>
+  <action name="actionLimpar_Dados">
+   <property name="text">
+    <string>Limpar Dados</string>
+   </property>
+  </action>
+  <action name="actionNova_Ra_a">
+   <property name="text">
+    <string>Nova Raça</string>
+   </property>
+  </action>
+  <action name="actionAdicionar_Po_o">
+   <property name="text">
+    <string>Adicionar Poção</string>
    </property>
   </action>
  </widget>
@@ -754,6 +1031,150 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>pv(int)</signal>
+   <receiver>label_34</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>556</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>244</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>pa(int)</signal>
+   <receiver>label_32</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>588</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>242</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>pm(int)</signal>
+   <receiver>label_33</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>586</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>242</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>inic(int)</signal>
+   <receiver>label_19</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>504</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>186</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>vida_atual(int)</signal>
+   <receiver>label_9</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>539</x>
+     <y>232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>187</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>perder_vida()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>517</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_2</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>vida_perdida(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>588</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>629</x>
+     <y>50</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>pv(int)</signal>
+   <receiver>progressBar</receiver>
+   <slot>setMaximum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>508</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>222</x>
+     <y>122</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>vida_atual(int)</signal>
+   <receiver>progressBar</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>550</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <signal>mudar_atributosForca(int)</signal>
@@ -761,6 +1182,13 @@
   <signal>mudar_atributosInteligencia(int)</signal>
   <signal>mudar_atributosConstituicao(int)</signal>
   <signal>mudar_atributosCarisma(int)</signal>
+  <signal>pv(int)</signal>
+  <signal>pm(int)</signal>
+  <signal>pa(int)</signal>
+  <signal>inic(int)</signal>
+  <signal>vida_atual(int)</signal>
   <slot>recebeLevel(int)</slot>
+  <slot>perder_vida()</slot>
+  <slot>vida_perdida(QString)</slot>
  </slots>
 </ui>
