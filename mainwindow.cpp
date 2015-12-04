@@ -13,15 +13,82 @@ MainWindow::MainWindow(QWidget *parent) :
     }
     lvl=0;
     vidap=0;
+    manap=0;
+    acaop=0;
+    vidag=0;
+    dinheiro=0;
+    dinheirog=0;
+    dinheirop=0;
+    pocaov=0;
+    pocaom=0;
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+void MainWindow::obter_pocao_de_mana(){
+    pocaom = pocaom + 1;
+    pocao_de_mana_atual(pocaom);
+}
+void MainWindow::usar_pocao_de_mana(){
+    if(pocaom>0){
+        pocaom = pocaom - 1;
+        mana = mana + 10;
+        if(mana>pmana){
+            mana = pmana;
+        }
+        mana_atual(mana);
+        pocao_de_mana_atual(pocaom);
+    }
+}
+void MainWindow::usar_pocao_de_vida(){
+    if(pocaov>0){
+        pocaov = pocaov - 1;
+        vida = vida + 10;
+        if(vida>pvida){
+            vida = pvida;
+        }
+        vida_atual(vida);
+        pocao_de_vida_atual(pocaov);
+    }
+}
+
+void MainWindow::obter_pocao_de_vida(){
+    pocaov = pocaov + 1;
+    pocao_de_vida_atual(pocaov);
+}
+
+void MainWindow::repousar(){
+    vida = pvida;
+    mana = pmana;
+    acao = pacao;
+    vida_atual(vida);
+    mana_atual(mana);
+    acao_atual(acao);
+}
+void MainWindow::dinheiro_perdido(QString v){
+    dinheirop = v.toInt();
+}
+
+void MainWindow::perder_dinheiro(){
+    dinheiro = dinheiro - dinheirop;
+    dinheiro_atual(dinheiro);
+}
+
+void MainWindow::dinheiro_ganho(QString s){
+    dinheirog = s.toInt();
+}
+
+void MainWindow::receber_dinheiro(){
+    dinheiro = dinheiro + dinheirog;
+    dinheiro_atual(dinheiro);
+}
+
 void MainWindow::vida_perdida(QString z){
     vidap = z.toInt();
 }
+
 void MainWindow::perder_vida(){
     vida = vida - vidap;
     if(vida<0){
@@ -29,6 +96,39 @@ void MainWindow::perder_vida(){
 
     }
     vida_atual(vida);
+}
+void MainWindow::vida_ganha(QString j){
+    vidag = j.toInt();
+}
+void MainWindow::receber_vida(){
+    vida = vida + vidag;
+    if(vida>pvida){
+        vida = pvida;
+    }
+     vida_atual(vida);
+}
+
+void MainWindow::mana_perdida(QString k){
+    manap = k.toInt();
+}
+void MainWindow::perder_mana(){
+    mana = mana - manap;
+    if(mana<0){
+        mana = 0;
+
+    }
+    mana_atual(mana);
+}
+void MainWindow::acao_perdida(QString w){
+    acaop = w.toInt();
+}
+void MainWindow::perder_acao(){
+    acao = acao - acaop;
+    if(acao<0){
+        acao = 0;
+
+    }
+    acao_atual(acao);
 }
 
 void MainWindow::atulizarDados(){
@@ -60,10 +160,16 @@ void MainWindow::atulizarDados(){
     vida_atual(vida);
     pmana = 2*lvl + inte*1.5;
     pm(pmana);
+    mana = pmana;
+    mana_atual(mana);
     pacao = 2*lvl + forc*1.3 + des*0.3 ;
     pa(pacao);
-    ini = 2*lvl + des*1.7 - cons*0.7;
+    acao = pacao;
+    acao_atual(acao);
+    ini = 3*lvl + des*1.7 - cons*0.7;
     inic(ini);
+
+
 
 
 
