@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "dialog.h"
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
         classes[i]=0;
     }
     lvl=0;
+    lvll=0;
     vidap=0;
     manap=0;
     acaop=0;
@@ -21,12 +22,85 @@ MainWindow::MainWindow(QWidget *parent) :
     dinheirop=0;
     pocaov=0;
     pocaom=0;
-}
+    forcr = 0;
+    forcc = 0;
+    desr = 0;
+    desc = 0;
+    inter = 0;
+    intec = 0;
+    consr = 0;
+    consc = 0;
+    carr = 0;
+    carc = 0;
 
+
+}
+void MainWindow::gerar_personagem(){
+    pvida=0;
+    pmana=0;
+    pacao=0;
+    ini=0;
+    forc = (forcr + forcc)*(1+lvll*0.1);
+    des = (desr + desc)*(1+lvll*0.1);
+    inte = (inter + intec)*(1+lvll*0.1);
+    cons = (consr + consc)*(1+lvll*0.1);
+    car = (carr + carc)*(1+lvll*0.1);
+    mudar_atributosForca(forc);
+    mudar_atributosDestreza(des);
+    mudar_atributosInteligencia(inte);
+    mudar_atributosConstituicao(cons);
+    mudar_atributosCarisma(car);
+    pvida = 2*lvll + cons*1.5 + forc* 0.5;
+    pv(pvida);
+    vida = pvida;
+    vida_atual(vida);
+    pmana = 2*lvll + inte*1.5;
+    pm(pmana);
+    mana = pmana;
+    mana_atual(mana);
+    pacao = 2*lvll + forc*1.3 + des*0.3 ;
+    pa(pacao);
+    acao = pacao;
+    acao_atual(acao);
+    ini = 3*lvll + des*1.1 - cons*0.4;
+    inic(ini);
+}  
+
+void MainWindow::car_raca(QString p){
+     carr = p.toInt();
+}
+void MainWindow::car_classe(QString a){
+    carc = a.toInt();
+}
+void MainWindow::cons_raca(QString i){
+    consr = i.toInt();
+}
+void MainWindow::cons_classe(QString o){
+    consc = o.toInt();
+}
+void MainWindow::inte_raca(QString y){
+    inter = y.toInt();
+}
+void MainWindow::inte_classe(QString u){
+    intec = u.toInt();
+}
+void MainWindow::des_raca(QString r){
+        desr = r.toInt();
+    }
+void MainWindow::des_classe(QString t){
+        desc = t.toInt();
+}
+void MainWindow::forc_raca(QString q){
+    forcr = q.toInt();
+}
+void MainWindow::forc_classe(QString e){
+    forcc = e.toInt();
+}
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 void MainWindow::obter_pocao_de_mana(){
     pocaom = pocaom + 1;
     pocao_de_mana_atual(pocaom);
@@ -34,7 +108,7 @@ void MainWindow::obter_pocao_de_mana(){
 void MainWindow::usar_pocao_de_mana(){
     if(pocaom>0){
         pocaom = pocaom - 1;
-        mana = mana + 10;
+        mana = mana + pmana*0.2;
         if(mana>pmana){
             mana = pmana;
         }
@@ -45,7 +119,7 @@ void MainWindow::usar_pocao_de_mana(){
 void MainWindow::usar_pocao_de_vida(){
     if(pocaov>0){
         pocaov = pocaov - 1;
-        vida = vida + 10;
+        vida = vida + pvida*0.2;
         if(vida>pvida){
             vida = pvida;
         }
@@ -60,12 +134,14 @@ void MainWindow::obter_pocao_de_vida(){
 }
 
 void MainWindow::repousar(){
-    vida = pvida;
     mana = pmana;
     acao = pacao;
+    pvida = 2*lvl + cons*1.5 + forc* 0.5;
+    vida = pvida;
     vida_atual(vida);
     mana_atual(mana);
     acao_atual(acao);
+    pv(pvida);
 }
 void MainWindow::dinheiro_perdido(QString v){
     dinheirop = v.toInt();
@@ -93,8 +169,10 @@ void MainWindow::perder_vida(){
     vida = vida - vidap;
     if(vida<0){
         vida = 0;
+        pvida = 0;
 
     }
+    pv(pvida);
     vida_atual(vida);
 }
 void MainWindow::vida_ganha(QString j){
@@ -132,6 +210,8 @@ void MainWindow::perder_acao(){
 }
 
 void MainWindow::atulizarDados(){
+
+
     forc = (racas[0]*7 + racas[1]*2 + racas[2]*10 + racas[3]*8 + racas[4]*10 +
            classes[0]*5 + classes[1]*2 + classes[2]*5 + classes[3]*2 + classes[4]*1)*(1+lvl*0.1);
     mudar_atributosForca(forc);
@@ -153,7 +233,7 @@ void MainWindow::atulizarDados(){
     mudar_atributosCarisma(car);
 
 
-    //TODO VIDA,MANA,STAMINA
+    //TODO VIDA,MANA,STAMINA,INIATIVA
     pvida = 2*lvl + cons*1.5 + forc* 0.5;
     pv(pvida);
     vida = pvida;
@@ -166,7 +246,7 @@ void MainWindow::atulizarDados(){
     pa(pacao);
     acao = pacao;
     acao_atual(acao);
-    ini = 3*lvl + des*1.7 - cons*0.7;
+    ini = 3*lvl + des*1.1 - cons*0.4;
     inic(ini);
 
 
@@ -196,4 +276,8 @@ void MainWindow::on_comboBox_2_activated(int index)
 void MainWindow::recebeLevel(int x){
     lvl=x;
     atulizarDados();
+}
+void MainWindow::recebeLevell(int n){
+    lvll = n;
+    gerar_personagem();
 }
